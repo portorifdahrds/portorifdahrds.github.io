@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Portofolio Rifdah</title>
+  <!-- <link rel="stylesheet" href="./style.css"> -->
+
+  <style type="text/css">
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html,
+body {
+	width: 100%;
+	height: 100vh;
+	overflow: hidden;
+}
+
+.container {
+	width: 100%;
+	height: 100vh;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #202217;
+	font-family: "Mak";
+}
+
+.blocks {
+	display: flex;
+	font-size: 140px;
+	color: #8d785b;
+}
+
+.circle-shape {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 800px;
+	height: 800px;
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	border-radius: 100%;
+}
+
+.circle-shape-2 {
+	position: absolute;
+	top: 40%;
+	left: 80%;
+	transform: translate(-50%, -50%);
+	width: 240px;
+	height: 240px;
+	background: #a83e0c;
+	border-radius: 100%;
+}
+
+.circle-shape-3 {
+	position: absolute;
+	top: 70%;
+	left: 10%;
+	transform: translate(-50%, -50%);
+	width: 140px;
+	height: 140px;
+	background: #a83e0c;
+	border-radius: 100%;
+	z-index: 2;
+}
+
+.wrapper-img {
+	overflow: hidden;
+	position: absolute;
+	top: 35% !important;
+	right: 18%;
+	width: 30%;
+	height: 90vh;
+}
+
+img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.box {
+	background: #202217;
+	opacity: 1;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	z-index: 0;
+}
+
+.site-logo {
+	position: fixed;
+	left: 50%;
+	transform: translateX(-50%);
+	font-family: "Mak";
+	font-size: 24px;
+	line-height: 100px;
+	text-transform: uppercase;
+	color: #8d785b;
+}
+
+.navbar {
+	position: fixed;
+	width: 100%;
+	height: 100px;
+	padding: 0 40px;
+	display: flex;
+	justify-content: space-between;
+	font-family: Arial, Helvetica, sans-serif !important;
+	text-transform: uppercase;
+	line-height: 100px;
+	color: #8d785b;
+}
+
+.site-menu {
+	display: flex;
+}
+
+.menu-item {
+	margin-left: 60px;
+}
+
+.showreel {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	padding: 40px;
+	font-family: Arial, Helvetica, sans-serif !important;
+	text-transform: uppercase;
+	color: #8d785b;
+	text-decoration: underline;
+}
+
+@media (max-width: 900px) {
+	.navbar {
+		display: none;
+	}
+}
+	</style>
+</head>
+
+<body>
+<!-- partial:index.partial.html -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+
+<body>
+	<!-- <div class="site-logo">mouthwash</div>
+	<div class="navbar">
+		<div class="site-info">portfolio</div>
+		<div class="site-menu">
+			<div class="menu-item">projects</div>
+			<div class="menu-item">about</div>
+			<div class="menu-item">contact</div>
+		</div>
+	</div> -->
+	<!-- <div class="showreel">view projects</div> -->
+	<div class="container">
+		<div class="circle-shape"></div>
+		<div class="circle-shape-2"></div>
+		<div class="circle-shape-3"></div>
+		<div class="blocks">
+			<div class="block-1 block">R</div>
+			<div class="block-2 block">I</div>
+			<div class="block-3 block">F</div>
+			<div class="block-4 block">D</div>
+			<div class="block-5 block">A</div>
+			<div class="block-5 block">H</div>
+		</div>
+	</div>
+	<script>
+		TweenMax.to(".block-1", 2, {
+			x: "-230",
+			y: "-100",
+			scale: "2.4",
+			ease: Expo.easeInOut,
+		});
+		TweenMax.to(".block-2", 2, {
+			x: "-150",
+			y: "170",
+			scale: "1.2",
+			ease: Expo.easeInOut,
+		});
+		TweenMax.to(".block-3", 2, {
+			x: "-40",
+			y: "30",
+			scale: "1.1",
+			ease: Expo.easeInOut,
+		});
+		TweenMax.to(".block-4", 2, {
+			x: "230",
+			y: "-60",
+			scale: "0.8",
+			ease: Expo.easeInOut,
+		});
+		TweenMax.to(".block-5", 2, {
+			x: "310",
+			y: "140",
+			scale: "1.2",
+			ease: Expo.easeInOut,
+		});
+		TweenMax.to(".box", 2.4, {
+			y: "-100%",
+			ease: Expo.easeInOut,
+		});
+		TweenMax.from(".circle-shape", 2.4, {
+			scale: "0",
+			ease: Expo.easeInOut,
+		});
+		TweenMax.from(".circle-shape-2", 2.4, {
+			scale: "0",
+			ease: Expo.easeInOut,
+		});
+		TweenMax.from(".circle-shape-3", 2.4, {
+			scale: "0",
+			ease: Expo.easeInOut,
+		});
+		TweenMax.from(".navbar > div", 1.6, {
+			opacity: 0,
+			y: 60,
+			ease: Expo.easeInOut,
+			delay: 0.6,
+		});
+		TweenMax.from(".site-logo", 1.6, {
+			opacity: 0,
+			y: 40,
+			ease: Expo.easeInOut,
+			delay: 0.6,
+		});
+		TweenMax.from(".showreel", 1.6, {
+			opacity: 0,
+			y: 40,
+			ease: Expo.easeInOut,
+			delay: 0.6,
+		});
+		TweenMax.staggerFrom(
+			".site-menu > div",
+			1, {
+				opacity: 0,
+				y: 60,
+				ease: Power2.easeOut,
+			},
+			0.2
+		);
+	</script>
+</body>
+<!-- partial -->
+  
+</body>
+</html>
